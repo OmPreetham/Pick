@@ -13,8 +13,6 @@
 		0EA83B0A2C5977120046BFD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA83B092C5977120046BFD1 /* Preview Assets.xcassets */; };
 		0EA83B122C59796C0046BFD1 /* Needle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA83B112C59796C0046BFD1 /* Needle.swift */; };
 		0EA83B152C5982E70046BFD1 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA83B142C5982E70046BFD1 /* PlayView.swift */; };
-		0EA83B172C598DA50046BFD1 /* Stand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA83B162C598DA50046BFD1 /* Stand.swift */; };
-		0EA83B192C59AD140046BFD1 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA83B182C59AD140046BFD1 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +23,6 @@
 		0EA83B092C5977120046BFD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0EA83B112C59796C0046BFD1 /* Needle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Needle.swift; sourceTree = "<group>"; };
 		0EA83B142C5982E70046BFD1 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
-		0EA83B162C598DA50046BFD1 /* Stand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stand.swift; sourceTree = "<group>"; };
-		0EA83B182C59AD140046BFD1 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				0EA83B112C59796C0046BFD1 /* Needle.swift */,
-				0EA83B162C598DA50046BFD1 /* Stand.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -90,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				0EA83B142C5982E70046BFD1 /* PlayView.swift */,
-				0EA83B182C59AD140046BFD1 /* EditView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -167,8 +161,6 @@
 			files = (
 				0EA83B122C59796C0046BFD1 /* Needle.swift in Sources */,
 				0EA83B052C5977110046BFD1 /* ContentView.swift in Sources */,
-				0EA83B192C59AD140046BFD1 /* EditView.swift in Sources */,
-				0EA83B172C598DA50046BFD1 /* Stand.swift in Sources */,
 				0EA83B152C5982E70046BFD1 /* PlayView.swift in Sources */,
 				0EA83B032C5977110046BFD1 /* PickApp.swift in Sources */,
 			);
@@ -312,9 +304,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,9 +337,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,28 +15,28 @@ Pick is a SwiftUI-based game where users interact with "Needles" and score point
 
 ![Preview](preview/VideoPreview.gif)  
 ![PlayView](preview/PlayView.png)  
-![EditView](preview/EditView.png)  
-*Description of what the screenshot shows.*
+![EndView](preview/EndView.png)  
+_Description of what the screenshot shows._
 
 ## Installation
 
 1. **Clone the repository**:
 
-    ```sh
-    git clone https://github.com/OmPreetham/pick.git
-    ```
+   ```sh
+   git clone https://github.com/OmPreetham/pick.git
+   ```
 
 2. **Navigate to the project directory**:
 
-    ```sh
-    cd pick
-    ```
+   ```sh
+   cd pick
+   ```
 
 3. **Open the project in Xcode**:
 
-    ```sh
-    open Pick.xcodeproj
-    ```
+   ```sh
+   open Pick.xcodeproj
+   ```
 
 4. **Build and run the project** in Xcode.
 

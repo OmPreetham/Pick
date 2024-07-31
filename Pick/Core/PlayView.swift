@@ -9,72 +9,58 @@ import SwiftUI
 
 struct PlayView: View {
     @State private var score: Int = 0
-    @State private var picks: String = "1"
-    @State private var showingSheet: Bool = false
-    
-    private var pickCount: Int {
-        Int(picks) ?? 0
-    }
+    @AppStorage("level") var level: Int = 1
+    @AppStorage("picks") var picks: Int = 1
     
     var body: some View {
-        NavigationView {
+        ZStack {
             VStack(spacing: 0) {
-                Text(numberToWords(score))
-                    .foregroundStyle(.white)
-                    .font(.system(size: 60, weight: .bold))
-                    .multilineTextAlignment(.trailing)
+                Group {
+                    Text(numberToWords(level))
+                        .font(.callout)
+                    
+                    Text(numberToWords(score))
+                        .font(.system(size: 60, weight: .bold))
+                        .multilineTextAlignment(.trailing)
+                }
+                .frame(width: UIScreen.main.bounds.width, alignment: .trailing)
                 
                 Spacer()
                 
-                Stand()
+                Divider()
+                    .background(Color.white)
                 
                 Spacer()
                 
                 ZStack {
-                    ForEach(0..<pickCount, id: \.self) { _ in
-                        NeedleView(score: $score)
-                    }
-                    
-                    if score == pickCount {
+                    if score == picks {
                         VStack {
-                            Text("YEYY! You Picked All")
-                                .foregroundStyle(.white)
+                            Text("Bravo!!! You Picked \(picks)!")
                                 .font(.largeTitle)
                             
-                            Button("New Game", systemImage: "slider.horizontal.3") {
-                                picks = ""
-                                showingSheet = true
+                            Button("Pick More", systemImage: "figure.pickleball") {
+                                picks *= 2
+                                level += 1
                                 score = 0
                             }
                             .padding(10)
-                            .foregroundStyle(.white)
-                            .background(Color.gray)
+                            .background(.ultraThinMaterial)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
+                    } else {
+                        ForEach(0..<picks, id: \.self) { _ in
+                            NeedleView(score: $score)
                         }
                     }
                 }
-                .offset(y: -30)
+                .offset(y: -50)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingSheet.toggle()
-                    } label: {
-                        Image(systemName: "slider.horizontal.3")
-                            .foregroundStyle(.white)
-                    }
-                }
-            }
-            .sheet(isPresented: $showingSheet) {
-                EditView(picks: $picks)
-                    .presentationDetents([.large, .medium])
-            }
-            .navigationTitle("PICKS")
-            .padding(.horizontal, 10)
-            .fontDesign(.serif)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .preferredColorScheme(.dark)
         }
+        .padding(.horizontal, 10)
+        .fontDesign(.serif)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .preferredColorScheme(.dark)
+        .foregroundStyle(.white)
     }
     
     func numberToWords(_ number: Int) -> String {
