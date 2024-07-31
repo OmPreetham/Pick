@@ -67,6 +67,12 @@ struct Needle: View {
     ZStack {
         Color.black.ignoresSafeArea()
         
-        Needle()
+        Needle(
+            needleWidth: 10,
+            needleHeight: 300,
+            bodyWidth: 20,
+            bodyHeight: 100,
+            spacing: -10
+        )
     }
 }
